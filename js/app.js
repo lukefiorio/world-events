@@ -66,14 +66,25 @@ function noMoreCorn() {
 // 7. The Renaissance
 // Add an event listener to the div element id of 'rebirth' and create a function to remove all the lowercase and uppercase z's in the content. 
 
+rebirth.addEventListener('click',noMoreZ);
 
+function noMoreZ() {
+    var divRebirth = document.getElementById('rebirth')
+    var newRebirth = divRebirth.innerHTML.replace(/z/gi,'');
+    divRebirth.innerHTML = newRebirth;
+}
 
 // 8. the Gutenberg Printing Press
 // Add an event listener to the h3 element id of 'showBooks' and create a function to display a random book title from the classics array in the div element of 'mustRead'.
 
 var classics = ["Charlotte's Web", "War and Peace", "The Secret", "How to Win Friends and Influence People", "Good to Great", "The Lean Startup", "The Odyssey", "Essentialism"];
 
+showBooks.addEventListener('click',randBook);
 
+function randBook() {
+    var divMustRead = document.getElementById('mustRead');
+    divMustRead.innerHTML = classics[Math.floor(Math.random()*classics.length)];
+}
 
 // 9. World War II
 // Add an event listener to the image element and create a function that will toggle between images when hovering (mouseover) on the image.
@@ -81,12 +92,33 @@ var classics = ["Charlotte's Web", "War and Peace", "The Secret", "How to Win Fr
 // use the following image reference:
 // https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73
 
+var imgTag = document.getElementsByTagName('img');
 
+imgTag[9].addEventListener('mouseover',newWarImg);
+imgTag[9].addEventListener('mouseout',origWarImg);
+
+function newWarImg() {
+    imgTag[9].src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73';
+}
+
+function origWarImg() {
+    imgTag[9].src = 'https://www.sagu.edu/images/thoughthub/thumbnails/2015/7-Interesting-Features-of-World-War-2-2.jpg';
+}
 
 // 10. The Industrial Revolution
 // Add an event listener to the h3 element and create a function that will reverse the contents in the div element id of 'gameChanger'
 
+var titleClass = document.getElementsByClassName('title');
+titleClass[9].addEventListener('click', reverse);
+//console.log(titleClass);
 
+function reverse() {
+    var divGameChanger = document.getElementById('gameChanger');
+    var arrGameChanger = divGameChanger.innerHTML.split('');
+    var arrRevGameChanger = arrGameChanger.reverse();
+    var divRevGameChanger = arrRevGameChanger.join('');
+    divGameChanger.innerHTML = divRevGameChanger;
+}
 
 // Final Boss
 // Add event listeners for the thumbs up and thumbs down images that will count the number of times the thumb has been clicked on. 
