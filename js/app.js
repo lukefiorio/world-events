@@ -32,7 +32,11 @@ function translation() {
 // 4. The Great Depression
 // Add an event listener to the h3 element id of 'hardTimes' and create a function to display the contents in the div element of 'depress'.
 
+hardTimes.addEventListener('mouseover',display);
 
+function display() {
+    document.getElementById('depress').style.display = 'block';
+}
 
 // 5. Apollo 11
 // Add an event listener to the h3 element id of 'blastOff' and create a function to show and hide the contents in the div element of 'moonWalk' after clicking on Apollo 11.
