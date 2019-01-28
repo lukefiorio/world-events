@@ -25,7 +25,9 @@ function changeContent() {
 
 var revolution = 'Boxer Uprising or Yihetuan Movement was an anti-imperialist uprising which took place in China towards the end of the Qing dynasty between 1899 and 1901. It was initiated by the Militia United in Righteousness, known in English as the "Boxers," and was motivated by proto-nationalist sentiments and opposition to foreign imperialism and associated Christian missionary activity.';
 
-
+function translation() {
+    document.getElementById('fightDaPower').innerHTML = revolution;
+}
 
 // 4. The Great Depression
 // Add an event listener to the h3 element id of 'hardTimes' and create a function to display the contents in the div element of 'depress'.
