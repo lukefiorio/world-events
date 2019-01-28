@@ -16,7 +16,9 @@ function italics() {
 
 var webContents = 'The Internet got its start in the United States more than 50 years ago as a government weapon in the Cold War. In the 1980s, research at CERN in Switzerland by British computer scientist Tim Berners-Lee resulted in the World Wide Web, linking hypertext documents into an information system, accessible from any node on the network.';
 
-
+function changeContent() {
+    document.getElementById('webby').innerHTML = webContents;
+}
 
 // 3. The Boxer Rebellion
 // Find the onclick event in div id of 'fightDaPower' and create a function that will convert the Chinese text in the same div element into English (the English content is provided below).
