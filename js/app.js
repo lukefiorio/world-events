@@ -41,7 +41,16 @@ function display() {
 // 5. Apollo 11
 // Add an event listener to the h3 element id of 'blastOff' and create a function to show and hide the contents in the div element of 'moonWalk' after clicking on Apollo 11.
 
+blastOff.addEventListener('click',toggleDisplay);
 
+function toggleDisplay() {
+    var divMonnWalk = document.getElementById('moonWalk');
+    if (divMonnWalk.style.display === 'none' || divMonnWalk.style.display==='') {
+        divMonnWalk.style.display = 'block';
+    } else {
+        divMonnWalk.style.display = 'none';
+    }
+}
 
 // 6. The American Civil War
 // Add an event listener to the div element id of 'freedom' and create a function to remove all instances of 'corn' in the content.
