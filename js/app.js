@@ -123,3 +123,39 @@ function reverse() {
 // Final Boss
 // Add event listeners for the thumbs up and thumbs down images that will count the number of times the thumb has been clicked on. 
 
+var thumbsUpClass = document.getElementsByClassName('fas fa-thumbs-up');
+var thumbsDownClass = document.getElementsByClassName('fas fa-thumbs-down');
+
+var upTallyClass = document.getElementsByClassName('up');
+var downTallyClass = document.getElementsByClassName('down');
+
+for (var i =0; i<thumbsUpClass.length; i++) {
+    thumbsUpClass[i].addEventListener('click',plusOne);
+}
+
+function plusOne(num) {
+    for (var i=0; i<upTallyClass.length; i++) {
+        // .target >> get the element that triggered the event.
+        if (thumbsUpClass[i]==num.target) {
+            upTallyClass[i].innerHTML ++;
+        }
+    }
+}
+
+for (var i =0; i<thumbsDownClass.length; i++) {
+    thumbsDownClass[i].addEventListener('click',minusOne);
+}
+
+function minusOne(num) {
+    for (var i=0; i<downTallyClass.length; i++) {
+        // .target >> get the element that triggered the event.
+        if (thumbsDownClass[i]==num.target) {
+            downTallyClass[i].innerHTML ++;
+        }
+    }
+}
+
+// console.log(thumbsUpClass);
+// console.log(thumbsDownClass);
+// console.log(upTallyClass);
+// console.log(downTallyClass);
